@@ -9,43 +9,44 @@ Plantilla Gym con Wordpress
     <?php endwhile; ?>
 
 **Funciones para usar en el loop de wordpress:**
-Titulo:
+
+**Titulo:**
 
 	<?php the_title(); ?>
 
-Contenido:
+**Contenido:**
 
 	<?php the_content(); ?>
 
-Autor:
+**Autor:**
 
     <?php the_author(); ?>
 
-Fecha:
+**Fecha:**
 
 	<?php the_date(); ?>
 
-Archivo de las Entradas
+**Archivo de las Entradas**
 
 	single.php
 
-Archivo General
+**Archivo General**
 
 	index.php
 
-Archivo de las Paginas
+**Archivo de las Paginas**
 
 	page.php
 
-Funciones personalizadas (css, js, bootstrap, jquery) se agregan en el archivo
+**Funciones personalizadas (css, js, bootstrap, jquery) se agregan en el archivo**
 
 	functions.php
 
-Las funciones se añaden al Hook
+**Las funciones se añaden al Hook**
 
 	add_action($tag, $function_to_add, $priority, $accepted_args)
 
-Función para mostrar el menú
+**Función para mostrar el menú**
     
     function nombredefuncion_menus() {
         register_nav_menus(array(
@@ -54,7 +55,7 @@ Función para mostrar el menú
     }
     add_action('init', 'gymfitness_menus');
     
-Función para mostrar el menu en el header
+**Función para mostrar el menu en el header**
 
 	//Menu de Navegación, agregar mas utilizando el arreglo
 	<?php 
@@ -67,11 +68,11 @@ Función para mostrar el menu en el header
         wp_nav_menu($args);
     ?>
     
-Función para llamar los scripts y los estilos en el header
+**Función para llamar los scripts y los estilos en el header**
 
 	<?php wp_head(); ?>
 
-Función para mostrar los scripts y los estilos
+**Función para mostrar los scripts y los estilos**
 
 	//Scripts y Styles
     function gymfitness_scripts_styles()
