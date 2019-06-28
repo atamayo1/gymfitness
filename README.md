@@ -42,11 +42,11 @@ Plantilla Gym con Wordpress
 
 	functions.php
 
-**Las funciones se añaden al Hook**
+**Las funciones se añaden al Hook functions.php**
 
 	add_action($tag, $function_to_add, $priority, $accepted_args)
 
-**Función para mostrar el menú**
+**Función para mostrar el menú functions.php**
     
     function nombredefuncion_menus() {
         register_nav_menus(array(
@@ -55,7 +55,7 @@ Plantilla Gym con Wordpress
     }
     add_action('init', 'gymfitness_menus');
     
-**Función para mostrar el menu en el header**
+**Función para mostrar el menu en el header.php**
 
 	//Menu de Navegación, agregar mas utilizando el arreglo
 	<?php 
@@ -68,11 +68,11 @@ Plantilla Gym con Wordpress
         wp_nav_menu($args);
     ?>
     
-**Función para llamar los scripts y los estilos en el header**
+**Función para llamar los scripts y los estilos en el header.php**
 
 	<?php wp_head(); ?>
 
-**Función para mostrar los scripts y los estilos**
+**Función para mostrar los scripts y los estilos functions.php**
 
 	//Scripts y Styles
     function gymfitness_scripts_styles()
